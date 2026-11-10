@@ -37,6 +37,7 @@ const icons: Record<string, string> = {
 };
 
 const stats = [
+  { n: '10', unit: 'years', text: 'working in the music industry' },
   { n: '7', unit: 'years', text: 'running Meta ad campaigns' },
   { n: '15+', unit: 'artists', text: 'worked with internationally' },
   { n: '20+', unit: 'release campaigns', text: 'planned and run for my artists' }
@@ -147,7 +148,7 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
         </div>
       </div>
       <ul class="stats">
-        <li v-for="s in stats" :key="s.unit">
+        <li v-for="s in stats" :key="s.unit + s.text">
           <span class="stat-n">{{ s.n }}</span>
           <span class="stat-t"><b>{{ s.unit }}</b>{{ s.text }}</span>
         </li>
