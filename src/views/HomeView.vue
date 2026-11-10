@@ -18,7 +18,7 @@ const artists = [
   { name: 'Einar Solberg', genre: 'Progressive rock, orchestral, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
   { name: 'Caligula’s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
   { name: 'Textures', genre: 'Progressive metal', country: 'NED', ...team, links: [web('https://texturesband.com/'), spotify('6v9XKyEf4HKmUMr3D6weIO')] },
-  { name: 'Voyager', genre: 'Progressive pop metal', country: 'AUS', ...team, links: [web('https://www.voyagerau.com/'), spotify('16fltNcwTM5V9rnxIlcha4')] },
+  { name: 'Voyager', genre: 'Progressive metal, synth-pop (Eurovision 2023)', country: 'AUS', ...team, links: [web('https://www.voyagerau.com/'), spotify('16fltNcwTM5V9rnxIlcha4')] },
   { name: 'Unprocessed', genre: 'Progressive metalcore, modern metal', country: 'GER', ...team, links: [web('https://www.unprocessed.band/'), spotify('13GH7wviJQ9gfZmr1pXHS4')] },
   { name: 'Leprous', genre: 'Progressive metal', country: 'NOR', role: 'Patreon', roleClass: 'sage', links: [{ kind: 'patreon' as const, href: 'https://www.patreon.com/Leprous' }] }
 ];
