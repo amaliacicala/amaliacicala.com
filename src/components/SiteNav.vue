@@ -6,7 +6,7 @@ const links = [
   { label: 'Artists', to: { path: '/', hash: '#roster' } },
   { label: 'Work', to: { path: '/', hash: '#work' } },
   { label: 'Services', to: '/services', match: '/services' },
-  { label: 'Experience', to: { path: '/', hash: '#cv' } },
+  { label: 'Experience', to: '/experience', match: '/experience' },
   { label: 'Photography', to: '/photos', match: '/photos' },
   { label: 'Contact', to: { path: '/', hash: '#contact' } }
 ];

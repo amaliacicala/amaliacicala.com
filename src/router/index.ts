@@ -17,6 +17,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/experience',
+      name: 'Experience',
+      component: () => import('../views/ExperienceView.vue'),
+      meta: {
+        title: `Experience & CV | ${SITE}`,
+        description:
+          'Experience, education and skills of Amalia Cicala, artist manager and music marketer at BANDS Management, based in Milan: roles, volunteering, degree, courses and toolkit.'
+      }
+    },
+    {
       path: '/services',
       name: 'Services',
       component: () => import('../views/ServicesView.vue'),

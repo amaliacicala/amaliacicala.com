@@ -17,6 +17,7 @@ const SELECTOR = [
   '.offer-list li',
   '.steps li',
   '.svc-preview a',
+  '.snapshot li',
   '.stats li',
   '.how',
   '.press-names li',
@@ -30,7 +31,7 @@ const SELECTOR = [
 ].join(',');
 
 // Rules that draw themselves across when they come into view
-const LINES = ['.hero-body', '.services', '.roster', '.cases', '.timeline', '.vol-list', '.fl-list', '.offer-list', '.steps', '.stats', '.press-names', '.edu-grid', '.albums', '.masonry', '.albums-empty'].join(',');
+const LINES = ['.hero-body', '.services', '.roster', '.cases', '.timeline', '.vol-list', '.fl-list', '.offer-list', '.steps', '.stats', '.press-names', '.snapshot', '.edu-grid', '.albums', '.masonry', '.albums-empty'].join(',');
 
 // Big headings whose words slide up from behind a mask
 const HEADINGS = ['.hero h1', '.sec-head h2', '.page-h', '.contact h2'].join(',');
