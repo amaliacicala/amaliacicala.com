@@ -19,10 +19,30 @@ const icons: Record<string, string> = {
 const stats = [
   { n: '10', unit: 'years', text: 'running Meta ad campaigns' },
   { n: '8', unit: 'artists', text: 'worked with internationally at BANDS Management' },
-  { n: '48', unit: 'hours', text: 'to get your written recap after every consultation' }
+  { n: '6', unit: 'countries', text: 'my artists come from, from Italy to Australia' }
 ];
 
-const groups = [
+interface Item {
+  icon: string;
+  title: string;
+  text: string;
+  links?: { label: string; href: string }[];
+}
+
+interface Group {
+  id: string;
+  label: string;
+  title: string;
+  photo: { src: string; alt: string; w: number; h: number };
+  intro: string;
+  facts: string[];
+  platforms?: string[];
+  items: Item[];
+  steps: { title: string; text: string }[];
+  cta: { label: string; href: string };
+}
+
+const groups: Group[] = [
   {
     id: 'consulting',
     label: 'Consulting',
@@ -52,6 +72,7 @@ const groups = [
     intro:
       'Ten years of running Meta campaigns for music. I keep up with every change to the platform and the algorithm, so your budget goes where it works.',
     facts: ['Checked and optimised daily', 'Updates and analytics throughout'],
+    platforms: ['Meta Ads', 'Facebook', 'Instagram', 'YouTube', 'Google Ads'],
     items: [
       { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with ad copy written in the language of the audience you’re targeting.' },
       { icon: 'video', title: 'YouTube ads', text: 'Video campaigns to grow views and subscribers around a single, a music video or a tour announcement.' },
@@ -75,7 +96,7 @@ const groups = [
     items: [
       { icon: 'doc', title: 'Press releases', text: 'Release and tour announcements written for press and webzines, in Italian and English.' },
       { icon: 'folder', title: 'EPKs', text: 'An electronic press kit with your bio, music, videos, photos, press quotes and live history, ready to send with every pitch. Made from the point of view of someone who works in the industry, so it shows exactly what bookers, labels and press look for and care about most.' },
-      { icon: 'browser', title: 'Websites', text: 'A clean, fast band or artist website that is easy to update, with your music, shows, merch and contacts in one place.' }
+      { icon: 'browser', title: 'Websites', text: 'A clean, fast band or artist website that is easy to update, with your music, shows, merch and contacts in one place. I code them myself, including this one.', links: [{ label: 'This website', href: 'https://amaliacicala.com/' }, { label: 'Benthos', href: 'https://benthos-band.com/' }, { label: 'ProAudio Italia', href: 'https://www.proaudioitalia.it/' }] }
     ],
     steps: [
       { title: 'Book the service', text: 'Choose a press release, an EPK or a website.' },
@@ -139,6 +160,7 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
           <ul class="facts">
             <li v-for="f in g.facts" :key="f">{{ f }}</li>
           </ul>
+          <p v-if="g.platforms" class="platforms"><span>Platforms</span><b v-for="pl in g.platforms" :key="pl">{{ pl }}</b></p>
         </div>
       </div>
 
@@ -147,6 +169,9 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
           <span class="offer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="icons[item.icon]"></svg></span>
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
+          <ul v-if="item.links" class="built">
+            <li v-for="l in item.links" :key="l.label"><a :href="l.href" target="_blank" rel="noopener">{{ l.label }} ↗</a></li>
+          </ul>
         </li>
       </ul>
 
