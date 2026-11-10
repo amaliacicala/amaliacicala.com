@@ -6,6 +6,12 @@ const addr = ref<HTMLAnchorElement | null>(null);
 const copyLabel = ref('Copy');
 const EMAIL = 'amalia@bands.management';
 
+const services = [
+  { hash: '#consulting', title: 'Consulting & coaching', short: '1:1 sessions, Q&A, audits', icon: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h3"/>' },
+  { hash: '#marketing', title: 'Ad campaigns', short: 'Meta and YouTube ads', icon: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" class="fill"/>' },
+  { hash: '#writing', title: 'Press, EPKs & websites', short: 'Press releases, EPKs, sites', icon: '<path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/>' }
+];
+
 type LinkKind = 'web' | 'listen' | 'patreon';
 const linkLabels: Record<LinkKind, string> = { web: 'their website', listen: 'Spotify', patreon: 'Patreon' };
 const spotify = (id: string) => ({ kind: 'listen' as const, href: `https://open.spotify.com/artist/${id}` });
@@ -79,7 +85,6 @@ async function copyMail() {
         <div class="svc"><h3>Booking &amp; touring</h3><p>Booking festivals, shows and tours, then tour managing them: advancing, budgets, routing, travel, carnets and customs.</p></div>
         <div class="svc"><h3>Content &amp; merch</h3><p>Release copy, newsletters, captions, short-form video and graphics. Merch, physical releases and stock planning.</p></div>
       </div>
-      <p class="svc-more"><RouterLink to="/services">See services for bands and artists →</RouterLink></p>
     </div>
   </section>
 
@@ -214,6 +219,28 @@ async function copyMail() {
           <li><span class="fl-name">Omens Before Hysteria</span><span class="fl-genre">Deathcore · Milan</span></li>
           <li><span class="fl-name">Furor Gallico</span><span class="fl-genre">Folk metal · Milan</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Services</p>
+        <div>
+          <h2 id="services-h">Work with me</h2>
+          <p class="intro">Consulting, ad campaigns and press materials for bands and artists, especially in metal and heavy music. In English and Italian, from Milan to anywhere.</p>
+        </div>
+      </div>
+      <nav class="svc-jump svc-preview" aria-label="Services">
+        <RouterLink v-for="sv in services" :key="sv.hash" :to="{ path: '/services', hash: sv.hash }">
+          <span class="jump-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="sv.icon"></svg></span>
+          <span class="jump-t"><b>{{ sv.title }}</b><small>{{ sv.short }}</small></span>
+          <span class="jump-arrow" aria-hidden="true">→</span>
+        </RouterLink>
+      </nav>
+      <div class="btns services-cta">
+        <RouterLink class="btn solid" to="/services">See all services</RouterLink>
       </div>
     </div>
   </section>

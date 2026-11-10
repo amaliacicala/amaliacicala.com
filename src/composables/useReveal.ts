@@ -16,6 +16,7 @@ const SELECTOR = [
   '.fl-list li',
   '.offer-list li',
   '.steps li',
+  '.svc-preview a',
   '.stats li',
   '.how',
   '.press-names li',
@@ -76,7 +77,14 @@ export function useReveal() {
 
   const scan = () => {
     if (!io) return;
-    document.querySelectorAll<HTMLElement>(HEADINGS).forEach(splitWords);
+    document.querySelectorAll<HTMLElement>(HEADINGS).forEach((el) => {
+      splitWords(el);
+      // Observe each heading itself, so its words reveal even outside an animated block
+      if (!el.dataset.watched) {
+        el.dataset.watched = '1';
+        io!.observe(el);
+      }
+    });
     document.querySelectorAll<HTMLElement>(LINES).forEach((el) => {
       if (el.classList.contains('ln')) return;
       el.classList.add('ln');

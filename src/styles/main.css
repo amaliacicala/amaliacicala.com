@@ -183,7 +183,7 @@ section.block{border-top:1px solid var(--line);padding-block:clamp(56px,8vw,104p
 .svc-jump a:hover .jump-icon{background:#FFFDFC}
 .jump-icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .jump-icon svg .fill{fill:currentColor;stroke:none}
-.jump-t{display:grid;min-width:0;line-height:1.2}
+.jump-t{display:grid;flex:1;min-width:0;line-height:1.2}
 .jump-t b{font-family:var(--display);font-weight:700;font-size:clamp(1.1rem,1.6vw,1.35rem)}
 .jump-t small{font-size:.88rem;color:var(--ink-soft);margin-top:3px}
 .svc-jump a:hover small{color:#1D1C1A}
