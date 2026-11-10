@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const addr = ref<HTMLAnchorElement | null>(null);
 const copyLabel = ref('Copy');
@@ -78,6 +79,7 @@ async function copyMail() {
         <div class="svc"><h3>Booking &amp; touring</h3><p>Booking festivals, shows and tours, then tour managing them: advancing, budgets, routing, travel, carnets and customs.</p></div>
         <div class="svc"><h3>Content &amp; merch</h3><p>Release copy, newsletters, captions, short-form video and graphics. Merch, physical releases and stock planning.</p></div>
       </div>
+      <p class="svc-more"><RouterLink to="/services">See services for bands and artists →</RouterLink></p>
     </div>
   </section>
 

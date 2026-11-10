@@ -110,7 +110,7 @@ async function main() {
   await writeFile(MANIFEST, JSON.stringify({ albums }, null, 2) + '\n');
 
   // Sitemap, so search engines find every album page
-  const urls = ['/', '/photos', ...albums.map((a) => `/photos/${a.slug}`)];
+  const urls = ['/', '/services', '/photos', ...albums.map((a) => `/photos/${a.slug}`)];
   const sitemap =
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join('\n') +

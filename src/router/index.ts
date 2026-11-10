@@ -17,6 +17,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/services',
+      name: 'Services',
+      component: () => import('../views/ServicesView.vue'),
+      meta: {
+        title: `Services for Bands: Meta Ads, Consulting & EPKs | ${SITE}`,
+        description:
+          'Consulting, coaching and audits for bands and artists, Meta and YouTube ad campaigns, press releases in Italian and English, EPKs and websites. Amalia Cicala, Milan, working worldwide.'
+      }
+    },
+    {
       path: '/photos',
       name: 'Photos',
       component: () => import('../views/photos/PhotosView.vue'),
