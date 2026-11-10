@@ -133,10 +133,10 @@ async function copyMail() {
   <section class="block" id="work" aria-labelledby="work-h">
     <div class="wrap">
       <div class="sec-head">
-        <p class="label">Selected work</p>
+        <p class="label">Work</p>
         <div>
-          <h2 id="work-h">Projects</h2>
-          <p class="intro">Two projects that show the range of the job, from running a band end to end to releasing an album without a label, plus recent freelance campaigns.</p>
+          <h2 id="work-h">Selected projects</h2>
+          <p class="intro">Two examples from my work, chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, some of my recent freelance campaigns.</p>
         </div>
       </div>
 
