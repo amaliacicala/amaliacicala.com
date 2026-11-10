@@ -11,7 +11,7 @@ import { albums, albumLine } from '@/content/photos';
         <div>
           <h1 id="photos-h" class="page-h">Concert photography</h1>
           <p class="intro">
-            I’m a concert and music photographer based in Milan, Italy, shooting live shows, festivals and press
+            I'm a concert and music photographer based in Milan, Italy, shooting live shows, festivals and press
             photos for bands. Available in Milan and worldwide.
           </p>
           <div class="btns photos-cta">
@@ -43,7 +43,7 @@ import { albums, albumLine } from '@/content/photos';
 
       <div v-else class="albums-empty">
         <h2>New galleries are on the way</h2>
-        <p>I’m putting together a fresh selection of recent shows. In the meantime, get in touch for bookings or to see more work.</p>
+        <p>I'm putting together a fresh selection of recent shows. In the meantime, get in touch for bookings or to see more work.</p>
         <RouterLink class="btn" :to="{ path: '/', hash: '#contact' }">Get in touch</RouterLink>
       </div>
     </div>

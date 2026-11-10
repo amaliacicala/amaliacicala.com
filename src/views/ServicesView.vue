@@ -80,7 +80,7 @@ const groups: Group[] = [
       { icon: 'calendar', title: 'Release & campaign mentoring', text: 'Regular sessions while you plan and run a release or a tour: timeline, assets, budget, what to do this week and what can wait.' },
       { icon: 'question', title: 'Music industry Q&A', text: 'Ask anything about how the industry works: labels, distribution, PROs, booking agents, PR, festivals, contracts and funding.' },
       { icon: 'compass', title: 'Coaching & next steps', text: 'An honest look at where you are and where you want to be, with clear next steps, improvements and the right partners to approach.' },
-      { icon: 'search', title: 'Audits', text: 'A review of your socials, your music and release strategy or your brand: what works, what doesn’t and what to change first.' }
+      { icon: 'search', title: 'Audits', text: 'A review of your socials, your music and release strategy or your brand: what works, what doesn\'t and what to change first.' }
     ],
     steps: [
       { title: 'Book your session', text: 'Pick the type of session. Questions first? Email me before you book.' },
@@ -107,7 +107,7 @@ const groups: Group[] = [
       { name: 'Google Ads', file: 'google-ads', h: 30 }
     ],
     items: [
-      { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with ad copy written in the language of the audience you’re targeting.' },
+      { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with ad copy written in the language of the audience you\'re targeting.' },
       { icon: 'video', title: 'YouTube ads', text: 'Video campaigns to grow views and subscribers around a single, a music video or a tour announcement.' },
       { icon: 'chart', title: 'Strategy & reporting', text: 'Audience research and budget planning before launch, then regular updates and analytics while the campaign runs.' }
     ],
@@ -141,7 +141,7 @@ const groups: Group[] = [
   }
 ];
 
-const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 'Textures', 'Voyager', 'Unprocessed', 'Leprous', 'Margin Code', 'Omens Before Hysteria', 'Furor Gallico'];
+const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula\'s Horse', 'Textures', 'Voyager', 'Unprocessed', 'Leprous', 'Margin Code', 'Omens Before Hysteria', 'Furor Gallico'];
 </script>
 
 <template>
@@ -173,8 +173,8 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
     </div>
   </header>
 
-  <section class="block marquee-block" aria-label="Artists I’ve worked with">
-    <p class="marquee-label wrap">Artists I’ve worked with</p>
+  <section class="block marquee-block" aria-label="Artists I've worked with">
+    <p class="marquee-label wrap">Artists I've worked with</p>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span v-for="n in 2" :key="n" class="marquee-set">

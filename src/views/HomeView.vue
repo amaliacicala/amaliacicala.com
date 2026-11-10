@@ -23,7 +23,7 @@ const artists = [
   { name: 'Benthos', genre: 'Progressive metal, mathcore', country: 'ITA', ...manager, links: [web('https://benthos-band.com/'), spotify('0A7v88d7h8uYeGaBhflb45')] },
   { name: 'Earthside', genre: 'Progressive metal, post-rock, cinematic rock', country: 'USA', ...team, links: [web('https://www.earthsideband.com/'), spotify('6mRDRKsNautYuxybddnvgg')] },
   { name: 'Einar Solberg', genre: 'Progressive rock, orchestral, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
-  { name: 'Caligula’s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
+  { name: 'Caligula\'s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
   { name: 'Textures', genre: 'Progressive metal', country: 'NED', ...team, links: [web('https://texturesband.com/'), spotify('6v9XKyEf4HKmUMr3D6weIO')] },
   { name: 'Voyager', genre: 'Progressive metal, synth-pop (Eurovision 2023)', country: 'AUS', ...team, links: [web('https://www.voyagerau.com/'), spotify('16fltNcwTM5V9rnxIlcha4')] },
   { name: 'Unprocessed', genre: 'Progressive metalcore, modern metal', country: 'GER', ...team, links: [web('https://www.unprocessed.band/'), spotify('13GH7wviJQ9gfZmr1pXHS4')] },
@@ -94,7 +94,7 @@ async function copyMail() {
         <div class="rail"><p class="label">Artists</p><figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure></div>
         <div>
           <h2 id="roster-h">Who I work with</h2>
-          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous’ Patreon.</p>
+          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
           <div class="photo-row">
             <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
             <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
@@ -155,7 +155,7 @@ async function copyMail() {
             <p class="summary">I run every side of the band: management, marketing, booking and the road. Since their InsideOut Music debut that has meant festival bills, major support tours and a first UK headline run.</p>
             <div class="case-cols">
               <div><h4>What I do</h4><ul>
-                <li>Find opportunities and shape the plan for the band’s growth</li>
+                <li>Find opportunities and shape the plan for the band's growth</li>
                 <li>Manage releases with InsideOut Music and liaise with PR</li>
                 <li>Plan the marketing and socials, and create their visuals</li>
                 <li>Book their festivals, headline shows and support tours</li>
@@ -164,10 +164,10 @@ async function copyMail() {
                 <li>Plan merch stock from past sell-through by show type</li>
               </ul></div>
               <div><h4>Results</h4><ul>
-                <li><i>From Nothing</i> listed in Loudwire’s 11 Best Prog Metal Albums of 2025</li>
+                <li><i>From Nothing</i> listed in Loudwire's 11 Best Prog Metal Albums of 2025</li>
                 <li>Metal Hammer UK print feature, with my band photo; “As A Cordyceps” shortlisted for its Best Metal Songs of 2025</li>
                 <li>Four Prog Report Awards 2025 nominations, including Breakthrough of the Year, plus Progspace Awards nominations</li>
-                <li>Kerrang! Radio play and a Guitar World Editors’ Pick</li>
+                <li>Kerrang! Radio play and a Guitar World Editors' Pick</li>
                 <li>Festivals including Euroblast, Midsummer Prog, RADAR and ArcTanGent</li>
                 <li>Support slots with Between The Buried And Me, Protest The Hero, Stick To Your Guns and Haken</li>
               </ul></div>
@@ -204,7 +204,7 @@ async function copyMail() {
                 <li><span>6 Nov</span>Halloween release party, Kreativfabrik, Wiesbaden</li>
               </ul></div>
             </div>
-            <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet’s best work.”</p><cite>Kerrang!</cite></blockquote>
+            <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet's best work.”</p><cite>Kerrang!</cite></blockquote>
           </div>
         </article>
       </div>
@@ -283,7 +283,7 @@ async function copyMail() {
       <div class="contact-grid">
         <div>
           <p class="label">Contact</p>
-          <h2 id="contact-h" class="contact-h">Working on a release or a tour? <em>Let’s talk.</em></h2>
+          <h2 id="contact-h" class="contact-h">Working on a release or a tour? <em>Let's talk.</em></h2>
           <p class="based">Based in Milan, Italy · Available worldwide</p>
           <p class="contact-svc">I offer 1:1 consultations, Meta and YouTube ad campaigns, press releases, EPKs and websites. <RouterLink to="/services">See all services →</RouterLink></p>
           <div class="mail">
