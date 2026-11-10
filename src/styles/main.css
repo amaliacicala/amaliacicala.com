@@ -45,7 +45,24 @@ nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 nav.top ul{display:flex;gap:clamp(12px,2.5vw,28px);list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav.top ul a{font-family:var(--display);font-size:.875rem;font-weight:500;text-decoration:none;color:var(--ink-soft)}
 nav.top ul a:hover{color:var(--ink)}
-@media (max-width:640px){nav.top ul li:not(.keep){display:none}}
+.menu-btn{display:none}
+@media (max-width:640px){
+  .menu-btn{display:grid;place-items:center;width:44px;height:44px;margin-right:-10px;border:0;background:transparent;color:var(--ink);cursor:pointer;position:relative;z-index:2}
+  .bars{display:grid;gap:6px;width:22px}
+  .bars span{display:block;height:2px;border-radius:2px;background:currentColor;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  nav.top.open .bars span:first-child{transform:translateY(4px) rotate(45deg)}
+  nav.top.open .bars span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  nav.top ul{position:fixed;inset:0;z-index:1;flex-direction:column;flex-wrap:nowrap;justify-content:center;gap:8px;padding:calc(80px + env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px)) max(28px,env(safe-area-inset-left,0px));background:var(--paper);border:12px solid var(--coral);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s .3s}
+  nav.top.open ul{opacity:1;visibility:visible;transition:opacity .3s ease}
+  nav.top ul li{opacity:0;transform:translateY(14px);transition:opacity .4s ease,transform .5s cubic-bezier(.2,.75,.15,1)}
+  nav.top.open ul li{opacity:1;transform:none;transition-delay:calc(var(--n) * 60ms + 80ms)}
+  nav.top ul a{font-size:clamp(2rem,10vw,2.6rem);font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25}
+  nav.top ul a.current,nav.top ul a:hover{color:var(--coral-ink)}
+  nav.top .mark{position:relative;z-index:2}
+  html.menu-open{overflow:hidden}
+  nav.top.open{backdrop-filter:none;-webkit-backdrop-filter:none}
+  nav.top ul a,nav.top ul a:hover,nav.top ul a.current{background:none!important;padding-bottom:0}
+}
 
 /* hero */
 .hero{padding-block:clamp(56px,10vw,120px) clamp(48px,7vw,88px)}
