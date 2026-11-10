@@ -12,7 +12,7 @@ import { albums, albumLine } from '@/content/photos';
           <h1 id="photos-h" class="page-h">Concert photography</h1>
           <p class="intro">
             I’m a concert and music photographer based in Milan, Italy, shooting live shows, festivals and press
-            photos for bands. My band photo of Benthos ran in Metal Hammer UK. Available in Milan and worldwide.
+            photos for bands. Available in Milan and worldwide.
           </p>
           <div class="btns photos-cta">
             <RouterLink class="btn solid" :to="{ path: '/', hash: '#contact' }">Book a shoot</RouterLink>
