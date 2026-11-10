@@ -36,6 +36,8 @@ const icons: Record<string, string> = {
   browser: '<rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.8" r=".5" class="fill"/><circle cx="8" cy="6.8" r=".5" class="fill"/>'
 };
 
+const ratios: Record<string, number> = { meta: 155 / 160, facebook: 808 / 160, instagram: 217 / 160, youtube: 716 / 160, 'google-ads': 427 / 160 };
+
 const stats = [
   { n: '10', unit: 'years', text: 'working with bands and artists' },
   { n: '7', unit: 'years', text: 'running Meta ad campaigns' },
@@ -54,10 +56,11 @@ interface Group {
   id: string;
   label: string;
   title: string;
+  short: string;
   photo: { src: string; alt: string; w: number; h: number };
   intro: string;
   facts: string[];
-  platforms?: string[];
+  platforms?: { name: string; file: string; h: number }[];
   items: Item[];
   steps: { title: string; text: string }[];
   cta: { label: string; href: string };
@@ -68,6 +71,7 @@ const groups: Group[] = [
     id: 'consulting',
     label: 'Consulting',
     title: 'Consulting & coaching',
+    short: '1:1 sessions, Q&A, audits',
     photo: { src: '/img/me/benthos-sony.jpg', alt: 'Amalia with Benthos outside Sony Music', w: 640, h: 800 },
     intro:
       'One-to-one sessions for bands and artists. Bring your questions, your plans or your problems, and leave with clear next steps.',
@@ -89,11 +93,18 @@ const groups: Group[] = [
     id: 'marketing',
     label: 'Digital marketing',
     title: 'Ad campaigns',
+    short: 'Meta and YouTube ads',
     photo: { src: '/img/me/voyager-euroblast.jpg', alt: 'Amalia backstage with Voyager at Euroblast', w: 900, h: 600 },
     intro:
       'Seven years of running Meta campaigns for music. I keep up with every change to the platform and the algorithm, so your budget goes where it works.',
     facts: ['Checked and optimised daily', 'Updates and analytics throughout'],
-    platforms: ['Meta Ads', 'Facebook', 'Instagram', 'YouTube', 'Google Ads'],
+    platforms: [
+      { name: 'Meta', file: 'meta', h: 40 },
+      { name: 'Facebook', file: 'facebook', h: 21 },
+      { name: 'Instagram', file: 'instagram', h: 40 },
+      { name: 'YouTube', file: 'youtube', h: 22 },
+      { name: 'Google Ads', file: 'google-ads', h: 30 }
+    ],
     items: [
       { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with ad copy written in the language of the audience you’re targeting.' },
       { icon: 'video', title: 'YouTube ads', text: 'Video campaigns to grow views and subscribers around a single, a music video or a tour announcement.' },
@@ -111,6 +122,7 @@ const groups: Group[] = [
     id: 'writing',
     label: 'Press & assets',
     title: 'Press, EPKs & websites',
+    short: 'Press releases, EPKs, sites',
     photo: { src: '/img/me/benthos-insideout.jpg', alt: 'Amalia with Benthos and the InsideOut Music team', w: 900, h: 600 },
     intro: 'The materials that get you taken seriously by press, bookers, labels and festivals.',
     facts: ['Free 10-minute kick-off call after booking', 'In English and Italian'],
@@ -143,7 +155,11 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
             Independent or signed, starting out or touring. Based in Milan, working remotely worldwide, in English and Italian.
           </p>
           <nav class="svc-jump" aria-label="Services on this page">
-            <a v-for="g in groups" :key="g.id" :href="`#${g.id}`">{{ g.title }}</a>
+            <a v-for="g in groups" :key="g.id" :href="`#${g.id}`">
+              <span class="jump-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="icons[g.items[0].icon]"></svg></span>
+              <span class="jump-t"><b>{{ g.title }}</b><small>{{ g.short }}</small></span>
+              <span class="jump-arrow" aria-hidden="true">↓</span>
+            </a>
           </nav>
         </div>
       </div>
@@ -181,7 +197,19 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
           <ul class="facts">
             <li v-for="f in g.facts" :key="f">{{ f }}</li>
           </ul>
-          <p v-if="g.platforms" class="platforms"><span>Platforms</span><b v-for="pl in g.platforms" :key="pl">{{ pl }}</b></p>
+          <div v-if="g.platforms" class="platforms">
+            <span class="platforms-label">Platforms</span>
+            <ul class="logos" aria-label="Platforms">
+              <li v-for="pl in g.platforms" :key="pl.file">
+                <span
+                  class="logo"
+                  role="img"
+                  :aria-label="pl.name"
+                  :style="{ '--logo': `url(/img/logos/${pl.file}.png)`, height: pl.h + 'px', aspectRatio: String(ratios[pl.file]) }"
+                ></span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
