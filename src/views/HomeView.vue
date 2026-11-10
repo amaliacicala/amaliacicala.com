@@ -147,12 +147,15 @@ async function copyMail() {
             <span class="yr">2023 – now</span>
             <span class="role-line">Sole manager</span>
             <div class="tags"><span class="pill">Management</span><span class="pill">Booking</span><span class="pill">Tour management</span><span class="pill">Digital marketing</span><span class="pill">Socials &amp; visuals</span></div>
-            <figure class="rail-photo"><img src="/img/me/benthos-sony.jpg" alt="Amalia with Benthos outside Sony Music" loading="lazy" width="640" height="800"><figcaption>With Benthos at Sony Music</figcaption></figure>
-            <figure class="rail-photo"><img src="/img/me/benthos-insideout.jpg" alt="Amalia with Benthos and the InsideOut Music team at the label office" loading="lazy" width="900" height="600"><figcaption>With Benthos and the InsideOut Music team</figcaption></figure>
+            <div class="case-photos">
+              <figure class="rail-photo"><img src="/img/me/benthos-sony.jpg" alt="Amalia with Benthos outside Sony Music" loading="lazy" width="640" height="800"><figcaption>With Benthos at Sony Music</figcaption></figure>
+              <figure class="rail-photo"><img src="/img/me/benthos-insideout.jpg" alt="Amalia with Benthos and the InsideOut Music team at the label office" loading="lazy" width="900" height="600"><figcaption>With Benthos and the InsideOut Music team</figcaption></figure>
+            </div>
           </div>
           <div>
             <h3><i>From Nothing</i>, and a first year on European stages</h3>
             <p class="summary">I run every side of the band: management, marketing, booking and the road. Since their InsideOut Music debut that has meant festival bills, major support tours and a first UK headline run.</p>
+            <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
             <div class="case-cols">
               <div><h4>What I do</h4><ul>
                 <li>Find opportunities and shape the plan for the band's growth</li>
@@ -182,11 +185,14 @@ async function copyMail() {
             <span class="yr">2025</span>
             <span class="role-line">Co-manager</span>
             <div class="tags"><span class="pill">Independent release</span><span class="pill">Physical &amp; retail</span><span class="pill">Fan events</span><span class="pill">Partnerships</span></div>
-            <figure class="rail-photo"><img src="/img/me/unprocessed-release.jpg" alt="Amalia with Unprocessed and the team at the Angel release party in London" loading="lazy" width="900" height="600"><figcaption><i>Angel</i> release party, London</figcaption></figure>
+            <div class="case-photos">
+              <figure class="rail-photo"><img src="/img/me/unprocessed-release.jpg" alt="Amalia with Unprocessed and the team at the Angel release party in London" loading="lazy" width="900" height="600"><figcaption><i>Angel</i> release party, London</figcaption></figure>
+            </div>
           </div>
           <div>
             <h3>Releasing <i>Angel</i> without a label</h3>
             <p class="summary">Our biggest project together was <i>Angel</i>, an independent album, where the management team took on everything a label would normally do, then turned release week into a run of Halloween events.</p>
+            <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
             <div class="case-cols">
               <div><h4>What we did</h4><ul>
                 <li>Managed vinyl and CD manufacturing: three double-vinyl variants, CD and a deluxe box</li>

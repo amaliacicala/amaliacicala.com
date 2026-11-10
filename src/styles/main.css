@@ -440,3 +440,30 @@ section.albums-block{padding-block:0 clamp(56px,8vw,104px);border-top:0}
 /* Roster rows slide in from the left rather than rise */
 .js-reveal .roster li.rv{transform:translateX(-24px)}
 .js-reveal .roster li.rv.in{transform:none}
+
+/* ---------- Mobile tidy-ups ---------- */
+.swipe-hint{display:none}
+@media (max-width:820px){
+  /* Section label first, then the heading and text, then the photo */
+  .sec-head > .rail{display:contents}
+  .sec-head > .rail > .label{order:0}
+  .sec-head > div:not(.rail){order:1}
+  .sec-head > .rail > .rail-photo{order:2;max-width:100%}
+  .sec-head > .rail > .rail-photo img{max-height:320px;width:auto;max-width:100%}
+
+  /* Projects: photos move under the text, lists become a swipeable row */
+  .case-side{display:contents}
+  .case{grid-template-columns:minmax(0,1fr);row-gap:10px}
+  .case-side > .who,.case-side > .yr,.case-side > .role-line,.case-side > .tags{order:0}
+  .case > div:not(.case-side){order:1}
+  .case-photos{order:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:10px;margin-top:6px}
+  .case-photos .rail-photo{max-width:none;margin:0}
+  .case-photos .rail-photo img{aspect-ratio:4/3;object-fit:cover}
+  .swipe-hint{display:block;font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-ink);margin:0 0 8px}
+  .case-cols{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:-4px;padding:2px 4px 6px}
+  .case-cols::-webkit-scrollbar{display:none}
+  .case-cols > div{flex:0 0 86%;scroll-snap-align:start;border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--paper)}
+  .case-cols ul{font-size:.92rem}
+  .case .summary{font-size:1rem;margin-bottom:16px}
+  .case .tags .pill{font-size:.64rem;padding:4px 8px}
+}
