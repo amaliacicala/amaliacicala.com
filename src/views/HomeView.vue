@@ -15,7 +15,7 @@ const team = { role: 'Co-manager', roleClass: 'co' };
 const artists = [
   { name: 'Benthos', genre: 'Progressive metal, mathcore', country: 'ITA', ...manager, links: [web('https://benthos-band.com/'), spotify('0A7v88d7h8uYeGaBhflb45')] },
   { name: 'Earthside', genre: 'Progressive metal, post-rock, cinematic rock', country: 'USA', ...team, links: [web('https://www.earthsideband.com/'), spotify('6mRDRKsNautYuxybddnvgg')] },
-  { name: 'Einar Solberg', genre: 'Progressive rock, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
+  { name: 'Einar Solberg', genre: 'Progressive rock, orchestral, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
   { name: 'Caligula’s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
   { name: 'Textures', genre: 'Progressive metal', country: 'NED', ...team, links: [web('https://texturesband.com/'), spotify('6v9XKyEf4HKmUMr3D6weIO')] },
   { name: 'Voyager', genre: 'Progressive pop metal', country: 'AUS', ...team, links: [web('https://www.voyagerau.com/'), spotify('16fltNcwTM5V9rnxIlcha4')] },
