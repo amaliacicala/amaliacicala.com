@@ -260,12 +260,13 @@ async function copyMail() {
           <p class="intro">From volunteering at shows and festivals to a music business degree and full-time artist management.</p>
         </div>
       </div>
-      <ul class="snapshot">
-        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
-        <li><span class="when-sm">2023 – 2025</span><h3>Artist Manager</h3><p>Independent · Milan</p></li>
+      <ol class="snapshot">
+        <li><span class="when-sm">2015</span><h3>First shows</h3><p>Volunteering on merch and street teams</p></li>
         <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
+        <li><span class="when-sm">2023</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
         <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
-      </ul>
+        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
+      </ol>
       <div class="btns services-cta">
         <RouterLink class="btn solid" to="/experience">See full experience</RouterLink>
       </div>
