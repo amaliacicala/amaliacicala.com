@@ -87,7 +87,6 @@ const groups = [
 ];
 
 const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 'Textures', 'Voyager', 'Unprocessed', 'Leprous', 'Margin Code', 'Omens Before Hysteria', 'Furor Gallico'];
-const press = ['Metal Hammer UK', 'Loudwire', 'Kerrang!', 'Guitar World', 'MetalSucks', 'Metal Injection', 'PROG Magazine'];
 </script>
 
 <template>
@@ -168,18 +167,8 @@ const press = ['Metal Hammer UK', 'Loudwire', 'Kerrang!', 'Guitar World', 'Metal
     </div>
   </section>
 
-  <section class="block offer press-block" aria-labelledby="press-h">
+  <section class="block offer" aria-label="Questions">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Press</p>
-        <div>
-          <h2 id="press-h">Coverage for my artists</h2>
-          <p class="intro">Features, reviews and lists my artists have earned in the last two years.</p>
-        </div>
-      </div>
-      <ul class="press-names">
-        <li v-for="p in press" :key="p">{{ p }}</li>
-      </ul>
       <p class="press-note">Questions about any service? Email <a :href="mail('Question')">{{ EMAIL }}</a></p>
     </div>
   </section>
