@@ -209,7 +209,7 @@ section.block{border-top:1px solid var(--line);padding-block:clamp(56px,8vw,104p
 
 /* contact */
 .contact{padding-block:clamp(64px,10vw,128px);border-top:1px solid var(--line)}
-.contact h2{font-size:clamp(2.4rem,8vw,6.5rem);font-weight:800;letter-spacing:-.03em;line-height:.95;max-width:12ch}
+.contact h2{font-size:clamp(1.8rem,4vw,3.2rem);font-weight:800;letter-spacing:-.025em;line-height:1.05;max-width:18ch}
 .contact h2 em{font-style:normal;color:var(--coral)}
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:36px}
 .mail .addr{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,3vw,1.8rem);text-decoration:none;border-bottom:2px solid var(--coral);user-select:all;overflow-wrap:anywhere}

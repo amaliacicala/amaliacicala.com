@@ -165,7 +165,7 @@ async function copyMail() {
                 <li>Support slots with Between The Buried And Me, Protest The Hero, Stick To Your Guns and Haken</li>
               </ul></div>
             </div>
-            <blockquote class="quote"><p>“Progressive post-hardcore at its finest.”</p><cite>Hive Magazine, RADAR Festival 2026</cite></blockquote>
+            <blockquote class="quote"><p>“The Italian prog metal merchants questioning the universe.”</p><cite>Metal Hammer UK</cite></blockquote>
           </div>
         </article>
 
@@ -197,6 +197,7 @@ async function copyMail() {
                 <li><span>6 Nov</span>Halloween release party, Kreativfabrik, Wiesbaden</li>
               </ul></div>
             </div>
+            <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet’s best work.”</p><cite>Kerrang!</cite></blockquote>
           </div>
         </article>
       </div>
@@ -214,7 +215,7 @@ async function copyMail() {
           <li><span class="when">2025 – now</span><div>
             <h3>Artist Manager</h3>
             <p class="org">BANDS Management · Worthing, UK · Full-time, hybrid</p>
-            <p class="d">Sole manager of Benthos, now as part of the agency, covering management, marketing, booking and tour management. Part of the management team for Earthside, Einar Solberg, Caligula’s Horse, Textures, Voyager and Unprocessed, working on releases, campaigns, touring and merch.</p>
+            <p class="d">Sole manager of Benthos, now as part of the agency, covering management, marketing, booking and tour management. Part of the management team for Earthside, Einar Solberg, Caligula’s Horse, Textures, Voyager and Unprocessed, working on releases, campaigns, touring and merch. Runs the Leprous Patreon with the team: content plan and schedule, Q&amp;As, reworking the membership tiers, optimising the page and supporting the community.</p>
           </div></li>
           <li><span class="when">2023 – 2025</span><div>
             <h3>Artist Manager</h3>
