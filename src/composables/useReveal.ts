@@ -18,6 +18,7 @@ const SELECTOR = [
   '.steps li',
   '.svc-preview a',
   '.snapshot li',
+  '.photos-hero',
   '.stats li',
   '.how',
   '.press-names li',

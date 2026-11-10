@@ -19,6 +19,10 @@ import { albums, albumLine } from '@/content/photos';
           </div>
         </div>
       </div>
+      <figure class="photos-hero">
+        <img src="/img/me/photographing-tesseract.jpg" alt="Amalia photographing TesseracT from the barrier as the singer reaches out to the crowd" width="1440" height="712" />
+        <figcaption>Shooting TesseracT from the barrier</figcaption>
+      </figure>
     </div>
   </header>
 

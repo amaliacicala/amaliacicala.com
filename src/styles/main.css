@@ -348,6 +348,9 @@ nav.top ul a.current{color:var(--ink);text-decoration:underline;text-decoration-
 .photos-head .sec-head{margin-bottom:0}
 .page-h{font-size:clamp(1.9rem,5.4vw,4.2rem);font-weight:800;letter-spacing:-.03em;line-height:.95}
 .photos-cta{margin-top:24px}
+.photos-hero{margin:clamp(32px,5vw,56px) 0 0}
+.photos-hero img{width:100%;height:auto;display:block;border-radius:6px}
+.photos-hero figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:8px}
 .album-meta{margin-top:14px;font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--coral-ink)}
 .label.back{text-decoration:none}
 .label.back:hover{color:var(--ink)}
