@@ -7,7 +7,8 @@ const links = [
   { label: 'Work', to: { path: '/', hash: '#work' } },
   { label: 'Experience', to: '/experience', match: '/experience' },
   { label: 'Services', to: '/services', match: '/services' },
-  { label: 'Photography', to: '/photos', match: '/photos' },
+  // Photography is hidden from the menu until the galleries are updated
+  // { label: 'Photography', to: '/photos', match: '/photos' },
   { label: 'Contact', to: { path: '/', hash: '#contact' } }
 ];
 

@@ -77,7 +77,7 @@ const groups: Group[] = [
       'One-to-one sessions for bands and artists. Bring your questions, your plans or your problems, and leave with clear next steps.',
     facts: ['45-minute video call', 'Written recap within 48 hours'],
     items: [
-      { icon: 'calendar', title: 'Release & campaign mentoring', text: 'Regular sessions while you plan and run a release or a tour: timeline, assets, budget, what to do this week and what can wait.' },
+      { icon: 'calendar', title: 'Release & campaign mentoring', text: 'A one-off session or regular calls while you plan and run a release or a tour: timeline, assets, budget, what to do this week and what can wait.' },
       { icon: 'question', title: 'Music industry Q&A', text: 'Ask anything about how the industry works: labels, distribution, PROs, booking agents, PR, festivals, contracts and funding.' },
       { icon: 'compass', title: 'Coaching & next steps', text: 'An honest look at where you are and where you want to be, with clear next steps, improvements and the right partners to approach.' },
       { icon: 'search', title: 'Audits', text: 'A review of your socials, your music and release strategy or your brand: what works, what doesn\'t and what to change first.' }
