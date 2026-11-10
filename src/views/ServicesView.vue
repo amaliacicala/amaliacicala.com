@@ -1,5 +1,25 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const EMAIL = 'amalia@bands.management';
+const addr = ref<HTMLAnchorElement | null>(null);
+const copyLabel = ref('Copy');
+async function copyMail() {
+  try {
+    await navigator.clipboard.writeText(EMAIL);
+    copyLabel.value = 'Copied';
+    setTimeout(() => (copyLabel.value = 'Copy'), 1600);
+  } catch {
+    if (!addr.value) return;
+    const range = document.createRange();
+    range.selectNodeContents(addr.value);
+    const sel = window.getSelection();
+    sel?.removeAllRanges();
+    sel?.addRange(range);
+    copyLabel.value = 'Selected';
+  }
+}
+
 const mail = (subject: string) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}`;
 
 // Simple line icons (24×24, drawn with stroke)
@@ -192,9 +212,15 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
     </div>
   </section>
 
-  <section class="block offer" aria-label="Questions">
+  <section class="contact" aria-labelledby="svc-contact-h">
     <div class="wrap">
-      <p class="press-note">Questions about any service? Email <a :href="mail('Question')">{{ EMAIL }}</a></p>
+      <p class="label">Contact</p>
+      <h2 id="svc-contact-h" class="contact-h">Questions about a service? <em>Ask me first.</em></h2>
+      <p class="based">Based in Milan, Italy · Working worldwide in English and Italian</p>
+      <div class="mail">
+        <a ref="addr" class="addr" :href="mail('Question')">{{ EMAIL }}</a>
+        <button class="copy" type="button" @click="copyMail">{{ copyLabel }}</button>
+      </div>
     </div>
   </section>
 </template>
