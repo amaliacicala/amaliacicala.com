@@ -144,7 +144,7 @@ async function copyMail() {
         <article class="case">
           <div class="case-side">
             <span class="who">Benthos</span>
-            <span class="yr">2023 – now</span>
+            <span class="yr">2022 – now</span>
             <span class="role-line">Sole manager</span>
             <div class="tags"><span class="pill">Management</span><span class="pill">Booking</span><span class="pill">Tour management</span><span class="pill">Digital marketing</span><span class="pill">Socials &amp; visuals</span></div>
             <div class="case-photos">
@@ -263,7 +263,7 @@ async function copyMail() {
       <ol class="snapshot">
         <li><span class="when-sm">2015</span><h3>First gigs</h3><p>Volunteering on merch and street teams</p></li>
         <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
-        <li><span class="when-sm">2023</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
+        <li><span class="when-sm">2022</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
         <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
         <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
       </ol>
