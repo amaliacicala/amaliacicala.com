@@ -373,6 +373,7 @@ async function copyMail() {
           <p class="label">Contact</p>
           <h2 id="contact-h" class="contact-h">Working on a release or a tour? <em>Let’s talk.</em></h2>
           <p class="based">Based in Milan, Italy · Available worldwide</p>
+          <p class="contact-svc">I offer 1:1 consultations, Meta and YouTube ad campaigns, press releases, EPKs and websites. <RouterLink to="/services">See all services →</RouterLink></p>
           <div class="mail">
             <a ref="addr" class="addr" href="mailto:amalia@bands.management">amalia@bands.management</a>
             <button class="copy" id="copyMail" type="button" @click="copyMail">{{ copyLabel }}</button>

@@ -331,6 +331,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 /* ---------- Photography ---------- */
 nav.top ul a.current{color:var(--ink);text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:6px}
 .contact-h{margin-top:16px}
+.contact-svc{margin-top:14px;max-width:58ch;color:var(--ink-soft)}
+.contact-svc a{font-family:var(--display);font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--coral);white-space:nowrap}
+.contact-svc a:hover{color:var(--coral-ink)}
 .based{margin-top:22px;font-family:var(--display);font-weight:600;font-size:.9rem;color:var(--ink-soft)}
 .photos-head{padding-block:clamp(48px,8vw,96px) clamp(28px,4vw,44px)}
 .photos-head .sec-head{margin-bottom:0}
