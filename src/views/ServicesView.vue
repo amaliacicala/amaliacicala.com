@@ -36,7 +36,7 @@ const icons: Record<string, string> = {
   browser: '<rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.8" r=".5" class="fill"/><circle cx="8" cy="6.8" r=".5" class="fill"/>'
 };
 
-const ratios: Record<string, number> = { meta: 155 / 160, facebook: 808 / 160, instagram: 217 / 160, youtube: 716 / 160, 'google-ads': 427 / 160 };
+const ratios: Record<string, number> = { meta: 155 / 160, facebook: 808 / 160, instagram: 217 / 160, youtube: 716 / 160, 'google-ads': 427 / 160, spotify: 585 / 160 };
 
 const stats = [
   { n: '10', unit: 'years', text: 'working with bands and artists' },
@@ -103,6 +103,7 @@ const groups: Group[] = [
       { name: 'Facebook', file: 'facebook', h: 21 },
       { name: 'Instagram', file: 'instagram', h: 40 },
       { name: 'YouTube', file: 'youtube', h: 22 },
+      { name: 'Spotify', file: 'spotify', h: 26 },
       { name: 'Google Ads', file: 'google-ads', h: 30 }
     ],
     items: [
@@ -154,15 +155,15 @@ const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula’s Horse', 
             Consulting, digital marketing and press materials for bands and artists, especially in metal and heavy music.
             Independent or signed, starting out or touring. Based in Milan, working remotely worldwide, in English and Italian.
           </p>
-          <nav class="svc-jump" aria-label="Services on this page">
-            <a v-for="g in groups" :key="g.id" :href="`#${g.id}`">
-              <span class="jump-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="icons[g.items[0].icon]"></svg></span>
-              <span class="jump-t"><b>{{ g.title }}</b><small>{{ g.short }}</small></span>
-              <span class="jump-arrow" aria-hidden="true">↓</span>
-            </a>
-          </nav>
         </div>
       </div>
+      <nav class="svc-jump" aria-label="Services on this page">
+        <a v-for="g in groups" :key="g.id" :href="`#${g.id}`">
+          <span class="jump-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="icons[g.items[0].icon]"></svg></span>
+          <span class="jump-t"><b>{{ g.title }}</b><small>{{ g.short }}</small></span>
+          <span class="jump-arrow" aria-hidden="true">↓</span>
+        </a>
+      </nav>
       <ul class="stats">
         <li v-for="s in stats" :key="s.unit + s.text">
           <span class="stat-n">{{ s.n }}</span>
