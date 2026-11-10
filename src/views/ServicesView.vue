@@ -18,8 +18,8 @@ const icons: Record<string, string> = {
 
 const stats = [
   { n: '10', unit: 'years', text: 'running Meta ad campaigns' },
-  { n: '8', unit: 'artists', text: 'worked with internationally at BANDS' },
-  { n: '3', unit: 'languages', text: 'Italian, English and German' }
+  { n: '8', unit: 'artists', text: 'worked with internationally at BANDS Management' },
+  { n: '48', unit: 'hours', text: 'to get your written recap after every consultation' }
 ];
 
 const groups = [
@@ -53,7 +53,7 @@ const groups = [
       'Ten years of running Meta campaigns for music. I keep up with every change to the platform and the algorithm, so your budget goes where it works.',
     facts: ['Checked and optimised daily', 'Updates and analytics throughout'],
     items: [
-      { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with copy in English, Italian or German.' },
+      { icon: 'target', title: 'Meta ads: Facebook & Instagram', text: 'Campaigns for streams, awareness, ticket sales, pre-saves and merch, built per market and audience, with ad copy written in the language of the audience you’re targeting.' },
       { icon: 'video', title: 'YouTube ads', text: 'Video campaigns to grow views and subscribers around a single, a music video or a tour announcement.' },
       { icon: 'chart', title: 'Strategy & reporting', text: 'Audience research and budget planning before launch, then regular updates and analytics while the campaign runs.' }
     ],
@@ -71,7 +71,7 @@ const groups = [
     title: 'Press, EPKs & websites',
     photo: { src: '/img/me/benthos-insideout.jpg', alt: 'Amalia with Benthos and the InsideOut Music team', w: 900, h: 600 },
     intro: 'The materials that get you taken seriously by press, bookers, labels and festivals.',
-    facts: ['Free 10-minute kick-off call after booking', 'Italian and English'],
+    facts: ['Free 10-minute kick-off call after booking', 'In English and Italian'],
     items: [
       { icon: 'doc', title: 'Press releases', text: 'Release and tour announcements written for press and webzines, in Italian and English.' },
       { icon: 'folder', title: 'EPKs', text: 'An electronic press kit with your bio, music, videos, photos, press quotes and live history, ready to send with every pitch. Made from the point of view of someone who works in the industry, so it shows exactly what bookers, labels and press look for and care about most.' },
@@ -99,7 +99,7 @@ const press = ['Metal Hammer UK', 'Loudwire', 'Kerrang!', 'Guitar World', 'Metal
           <h1 id="services-h" class="page-h">Work with me</h1>
           <p class="intro">
             Consulting, digital marketing and press materials for bands and artists, especially in metal and heavy music.
-            Independent or signed, starting out or touring. Based in Milan, working remotely worldwide.
+            Independent or signed, starting out or touring. Based in Milan, working remotely worldwide, in English and Italian.
           </p>
           <nav class="svc-jump" aria-label="Services on this page">
             <a v-for="g in groups" :key="g.id" :href="`#${g.id}`">{{ g.title }}</a>
