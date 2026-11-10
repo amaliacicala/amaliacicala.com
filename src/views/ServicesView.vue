@@ -17,9 +17,9 @@ const icons: Record<string, string> = {
 };
 
 const stats = [
-  { n: '10', unit: 'years', text: 'running Meta ad campaigns' },
+  { n: '7', unit: 'years', text: 'running Meta ad campaigns' },
   { n: '8', unit: 'artists', text: 'worked with internationally at BANDS Management' },
-  { n: '6', unit: 'countries', text: 'my artists come from, from Italy to Australia' }
+  { n: '20+', unit: 'release campaigns', text: 'planned and run for my artists' }
 ];
 
 interface Item {
@@ -70,7 +70,7 @@ const groups: Group[] = [
     title: 'Ad campaigns',
     photo: { src: '/img/me/voyager-euroblast.jpg', alt: 'Amalia backstage with Voyager at Euroblast', w: 900, h: 600 },
     intro:
-      'Ten years of running Meta campaigns for music. I keep up with every change to the platform and the algorithm, so your budget goes where it works.',
+      'Seven years of running Meta campaigns for music. I keep up with every change to the platform and the algorithm, so your budget goes where it works.',
     facts: ['Checked and optimised daily', 'Updates and analytics throughout'],
     platforms: ['Meta Ads', 'Facebook', 'Instagram', 'YouTube', 'Google Ads'],
     items: [
