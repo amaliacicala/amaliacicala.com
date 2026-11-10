@@ -37,7 +37,7 @@ const icons: Record<string, string> = {
 };
 
 const stats = [
-  { n: '10', unit: 'years', text: 'working in the music industry' },
+  { n: '10', unit: 'years', text: 'working with bands and artists' },
   { n: '7', unit: 'years', text: 'running Meta ad campaigns' },
   { n: '15+', unit: 'artists', text: 'worked with internationally' },
   { n: '20+', unit: 'release campaigns', text: 'planned and run for my artists' }
