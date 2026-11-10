@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const addr = ref<HTMLAnchorElement | null>(null);
 const copyLabel = ref('Copy');
 const EMAIL = 'amalia@bands.management';
+
+const services = [
+  { hash: '#consulting', title: 'Consulting & coaching', short: '1:1 sessions, Q&A, audits', icon: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h3"/>' },
+  { hash: '#marketing', title: 'Ad campaigns', short: 'Meta and YouTube ads', icon: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" class="fill"/>' },
+  { hash: '#writing', title: 'Press, EPKs & websites', short: 'Press releases, EPKs, sites', icon: '<path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/>' }
+];
 
 type LinkKind = 'web' | 'listen' | 'patreon';
 const linkLabels: Record<LinkKind, string> = { web: 'their website', listen: 'Spotify', patreon: 'Patreon' };
@@ -16,7 +23,7 @@ const artists = [
   { name: 'Benthos', genre: 'Progressive metal, mathcore', country: 'ITA', ...manager, links: [web('https://benthos-band.com/'), spotify('0A7v88d7h8uYeGaBhflb45')] },
   { name: 'Earthside', genre: 'Progressive metal, post-rock, cinematic rock', country: 'USA', ...team, links: [web('https://www.earthsideband.com/'), spotify('6mRDRKsNautYuxybddnvgg')] },
   { name: 'Einar Solberg', genre: 'Progressive rock, orchestral, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
-  { name: 'Caligula’s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
+  { name: 'Caligula\'s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
   { name: 'Textures', genre: 'Progressive metal', country: 'NED', ...team, links: [web('https://texturesband.com/'), spotify('6v9XKyEf4HKmUMr3D6weIO')] },
   { name: 'Voyager', genre: 'Progressive metal, synth-pop (Eurovision 2023)', country: 'AUS', ...team, links: [web('https://www.voyagerau.com/'), spotify('16fltNcwTM5V9rnxIlcha4')] },
   { name: 'Unprocessed', genre: 'Progressive metalcore, modern metal', country: 'GER', ...team, links: [web('https://www.unprocessed.band/'), spotify('13GH7wviJQ9gfZmr1pXHS4')] },
@@ -87,7 +94,7 @@ async function copyMail() {
         <div class="rail"><p class="label">Artists</p><figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure></div>
         <div>
           <h2 id="roster-h">Who I work with</h2>
-          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous’ Patreon.</p>
+          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
           <div class="photo-row">
             <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
             <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
@@ -126,10 +133,10 @@ async function copyMail() {
   <section class="block" id="work" aria-labelledby="work-h">
     <div class="wrap">
       <div class="sec-head">
-        <p class="label">Selected work</p>
+        <p class="label">Work</p>
         <div>
-          <h2 id="work-h">Projects</h2>
-          <p class="intro">Two projects that show the range of the job, from running a band end to end to releasing an album without a label, plus recent freelance campaigns.</p>
+          <h2 id="work-h">Selected projects</h2>
+          <p class="intro">Two examples from my work, chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, some of my recent freelance campaigns.</p>
         </div>
       </div>
 
@@ -140,15 +147,18 @@ async function copyMail() {
             <span class="yr">2023 – now</span>
             <span class="role-line">Sole manager</span>
             <div class="tags"><span class="pill">Management</span><span class="pill">Booking</span><span class="pill">Tour management</span><span class="pill">Digital marketing</span><span class="pill">Socials &amp; visuals</span></div>
-            <figure class="rail-photo"><img src="/img/me/benthos-sony.jpg" alt="Amalia with Benthos outside Sony Music" loading="lazy" width="640" height="800"><figcaption>With Benthos at Sony Music</figcaption></figure>
-            <figure class="rail-photo"><img src="/img/me/benthos-insideout.jpg" alt="Amalia with Benthos and the InsideOut Music team at the label office" loading="lazy" width="900" height="600"><figcaption>With Benthos and the InsideOut Music team</figcaption></figure>
+            <div class="case-photos">
+              <figure class="rail-photo"><img src="/img/me/benthos-sony.jpg" alt="Amalia with Benthos outside Sony Music" loading="lazy" width="640" height="800"><figcaption>With Benthos at Sony Music</figcaption></figure>
+              <figure class="rail-photo"><img src="/img/me/benthos-insideout.jpg" alt="Amalia with Benthos and the InsideOut Music team at the label office" loading="lazy" width="900" height="600"><figcaption>With Benthos and the InsideOut Music team</figcaption></figure>
+            </div>
           </div>
           <div>
             <h3><i>From Nothing</i>, and a first year on European stages</h3>
             <p class="summary">I run every side of the band: management, marketing, booking and the road. Since their InsideOut Music debut that has meant festival bills, major support tours and a first UK headline run.</p>
+            <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
             <div class="case-cols">
               <div><h4>What I do</h4><ul>
-                <li>Find opportunities and shape the plan for the band’s growth</li>
+                <li>Find opportunities and shape the plan for the band's growth</li>
                 <li>Manage releases with InsideOut Music and liaise with PR</li>
                 <li>Plan the marketing and socials, and create their visuals</li>
                 <li>Book their festivals, headline shows and support tours</li>
@@ -157,10 +167,10 @@ async function copyMail() {
                 <li>Plan merch stock from past sell-through by show type</li>
               </ul></div>
               <div><h4>Results</h4><ul>
-                <li><i>From Nothing</i> listed in Loudwire’s 11 Best Prog Metal Albums of 2025</li>
+                <li><i>From Nothing</i> listed in Loudwire's 11 Best Prog Metal Albums of 2025</li>
                 <li>Metal Hammer UK print feature, with my band photo; “As A Cordyceps” shortlisted for its Best Metal Songs of 2025</li>
                 <li>Four Prog Report Awards 2025 nominations, including Breakthrough of the Year, plus Progspace Awards nominations</li>
-                <li>Kerrang! Radio play and a Guitar World Editors’ Pick</li>
+                <li>Kerrang! Radio play and a Guitar World Editors' Pick</li>
                 <li>Festivals including Euroblast, Midsummer Prog, RADAR and ArcTanGent</li>
                 <li>Support slots with Between The Buried And Me, Protest The Hero, Stick To Your Guns and Haken</li>
               </ul></div>
@@ -175,11 +185,14 @@ async function copyMail() {
             <span class="yr">2025</span>
             <span class="role-line">Co-manager</span>
             <div class="tags"><span class="pill">Independent release</span><span class="pill">Physical &amp; retail</span><span class="pill">Fan events</span><span class="pill">Partnerships</span></div>
-            <figure class="rail-photo"><img src="/img/me/unprocessed-release.jpg" alt="Amalia with Unprocessed and the team at the Angel release party in London" loading="lazy" width="900" height="600"><figcaption><i>Angel</i> release party, London</figcaption></figure>
+            <div class="case-photos">
+              <figure class="rail-photo"><img src="/img/me/unprocessed-release.jpg" alt="Amalia with Unprocessed and the team at the Angel release party in London" loading="lazy" width="900" height="600"><figcaption><i>Angel</i> release party, London</figcaption></figure>
+            </div>
           </div>
           <div>
             <h3>Releasing <i>Angel</i> without a label</h3>
             <p class="summary">Our biggest project together was <i>Angel</i>, an independent album, where the management team took on everything a label would normally do, then turned release week into a run of Halloween events.</p>
+            <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
             <div class="case-cols">
               <div><h4>What we did</h4><ul>
                 <li>Managed vinyl and CD manufacturing: three double-vinyl variants, CD and a deluxe box</li>
@@ -197,7 +210,7 @@ async function copyMail() {
                 <li><span>6 Nov</span>Halloween release party, Kreativfabrik, Wiesbaden</li>
               </ul></div>
             </div>
-            <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet’s best work.”</p><cite>Kerrang!</cite></blockquote>
+            <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet's best work.”</p><cite>Kerrang!</cite></blockquote>
           </div>
         </article>
       </div>
@@ -216,111 +229,46 @@ async function copyMail() {
     </div>
   </section>
 
+  <section class="block" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Services</p>
+        <div>
+          <h2 id="services-h">Work with me</h2>
+          <p class="intro">Consulting, ad campaigns and press materials for bands and artists, especially in metal and heavy music. In English and Italian, from Milan to anywhere.</p>
+        </div>
+      </div>
+      <nav class="svc-jump svc-preview" aria-label="Services">
+        <RouterLink v-for="sv in services" :key="sv.hash" :to="{ path: '/services', hash: sv.hash }">
+          <span class="jump-icon" aria-hidden="true"><svg viewBox="0 0 24 24" v-html="sv.icon"></svg></span>
+          <span class="jump-t"><b>{{ sv.title }}</b><small>{{ sv.short }}</small></span>
+          <span class="jump-arrow" aria-hidden="true">→</span>
+        </RouterLink>
+      </nav>
+      <div class="btns services-cta">
+        <RouterLink class="btn solid" to="/services">See all services</RouterLink>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="cv" aria-labelledby="cv-h">
     <div class="wrap">
       <div class="sec-head">
         <p class="label">Experience</p>
-        <div><h2 id="cv-h">Curriculum</h2></div>
-      </div>
-      <div class="cv">
-        <ol class="timeline" reversed>
-          <li><span class="when">2025 – now</span><div>
-            <h3>Artist Manager</h3>
-            <p class="org">BANDS Management · Worthing, UK · Full-time, hybrid</p>
-            <p class="d">Sole manager of Benthos, now as part of the agency, covering management, marketing, booking and tour management. Part of the management team for Earthside, Einar Solberg, Caligula’s Horse, Textures, Voyager and Unprocessed, working on releases, campaigns, touring and merch. Runs the Leprous Patreon with the team: content plan and schedule, Q&amp;As, reworking the membership tiers, optimising the page and supporting the community.</p>
-          </div></li>
-          <li><span class="when">2023 – 2025</span><div>
-            <h3>Artist Manager</h3>
-            <p class="org">Independent · Milan</p>
-            <p class="d">Started managing Benthos on my own in 2023, covering management, marketing, booking and tour management, before joining BANDS Management.</p>
-          </div></li>
-          <li><span class="when">2020 – now</span><div>
-            <h3>Music Marketing &amp; Digital Management</h3>
-            <p class="org">Freelance · Remote</p>
-            <p class="d">Services for independent artists alongside agency work:</p>
-            <ul class="d-list">
-              <li>Social media campaigns for visibility, streams and tour promotion</li>
-              <li>Digital management, including content distribution and PRO support</li>
-              <li>Design for promo materials, and photo and video content</li>
-              <li>Coaching on fan growth, branding and messaging</li>
-            </ul>
-          </div></li>
-          <li><span class="when">2023 – now</span><div>
-            <h3>Concert Photographer</h3>
-            <p class="org">Freelance · Milan &amp; worldwide</p>
-            <p class="d">Live photography for bands and venues.</p>
-          </div></li>
-        </ol>
-        <aside class="kit" aria-label="Toolkit">
-          <div class="kit-group"><h3>Marketing</h3><div class="chips"><span>Meta Ads Manager</span><span>Meta Pixel</span><span>Google Ads</span><span>Google Analytics</span><span>SEO</span><span>Feature.fm</span><span>Bandsintown</span><span>Songkick</span></div></div>
-          <div class="kit-group"><h3>Content</h3><div class="chips"><span>Photoshop</span><span>Illustrator</span><span>Lightroom</span><span>Premiere Pro</span><span>CapCut</span><span>Meta Business Suite</span><span>Mailchimp</span><span>YouTube Studio</span><span>Photography</span></div></div>
-          <div class="kit-group"><h3>Operations</h3><div class="chips"><span>Google Workspace</span><span>Notion</span><span>Excel</span><span>Daysheets</span><span>Shopify</span><span>SumUp POS</span><span>Discord</span><span>ATA Carnet</span></div></div>
-          <div class="kit-group"><h3>Languages</h3><div class="chips"><span>Italian · native</span><span>English · C2</span><span>German · B1</span></div></div>
-        </aside>
-      </div>
-
-      <div class="volunteer" aria-labelledby="vol-h">
-        <h3 class="sub-sm" id="vol-h">Volunteering</h3>
-        <ul class="vol-list">
-          <li>
-            <span class="when-sm">2019 – 2024</span>
-            <h4>Volunteer Steward</h4>
-            <p class="org">ArcTanGent Festival, Bristol</p>
-            <p class="d">Three editions as a volunteer steward, years before bringing Benthos to its stage in 2026.</p>
-          </li>
-          <li>
-            <span class="when-sm">2019</span>
-            <h4>Volunteer Steward</h4>
-            <p class="org">Wallride Festival</p>
-            <p class="d">Social media, ticket sales, info point, contest registrations and merch sales.</p>
-          </li>
-          <li>
-            <span class="when-sm">2015 – 2016</span>
-            <h4>Volunteer, Street Team</h4>
-            <p class="org">Steven Wilson</p>
-            <p class="d">Sold official merchandise, welcomed fans and processed payments at four shows across Italy and Germany.</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="edu" aria-labelledby="edu-h">
-        <h3 class="sub" id="edu-h">Education</h3>
-        <div class="edu-grid">
-          <div class="edu-cards">
-            <div class="degree">
-            <p class="when-sm">2018 – 2021</p>
-            <h4>BA (Hons) Commercial Music</h4>
-            <p class="org">University of the West of Scotland</p>
-            <p class="honours">First Class Honours</p>
-            <ul>
-              <li>Specialism: Music Business</li>
-              <li>Scholarship for academic excellence</li>
-            </ul>
-          </div>
-            <div class="degree alt">
-              <p class="when-sm">2024</p>
-              <h4>Event Production Programme</h4>
-              <p class="org">Legend Club, Milan</p>
-              <p class="honours">1 of 15 selected</p>
-              <ul>
-                <li>Artistic direction, event planning, pre-production, production and hospitality</li>
-                <li>Organised two events at the venue</li>
-                <li>Worked hospitality and production across the spring/summer 2024 programme</li>
-              </ul>
-            </div>
-          </div>
-          <div class="certs">
-            <h4 class="sub-sm">Courses &amp; certifications</h4>
-            <ul class="cert-list">
-              <li><span>Concert Photography Masterclass</span><span class="by">Skillshare</span><span class="y">2024</span></li>
-              <li><span>Google Analytics Individual Qualification</span><span class="by">Google</span><span class="y">2021</span></li>
-              <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/NLUSXB6VUZ8G" target="_blank" rel="noopener">Music Business Foundations ↗</a><span class="by">Berklee Online</span><span class="y">2021</span></li>
-              <li><span>Marketing</span><span class="by">Woom Italia</span><span class="y">2021</span></li>
-              <li><span>Google Ads Display Certification</span><span class="by">Google</span><span class="y">2021</span></li>
-              <li><span>Social Media Marketing Specialist</span><span class="by">Sudformazione</span><span class="y">2021</span></li>
-            </ul>
-          </div>
+        <div>
+          <h2 id="cv-h">Ten years around bands</h2>
+          <p class="intro">From volunteering at shows and festivals to a music business degree and full-time artist management.</p>
         </div>
+      </div>
+      <ol class="snapshot">
+        <li><span class="when-sm">2015</span><h3>First shows</h3><p>Volunteering on merch and street teams</p></li>
+        <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
+        <li><span class="when-sm">2023</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
+        <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
+        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
+      </ol>
+      <div class="btns services-cta">
+        <RouterLink class="btn solid" to="/experience">See full experience</RouterLink>
       </div>
     </div>
   </section>
@@ -342,8 +290,9 @@ async function copyMail() {
       <div class="contact-grid">
         <div>
           <p class="label">Contact</p>
-          <h2 id="contact-h" class="contact-h">Working on a release or a tour? <em>Let’s talk.</em></h2>
+          <h2 id="contact-h" class="contact-h">Working on a release or a tour? <em>Let's talk.</em></h2>
           <p class="based">Based in Milan, Italy · Available worldwide</p>
+          <p class="contact-svc">I offer 1:1 consultations, Meta and YouTube ad campaigns, press releases, EPKs and websites. <RouterLink to="/services">See all services →</RouterLink></p>
           <div class="mail">
             <a ref="addr" class="addr" href="mailto:amalia@bands.management">amalia@bands.management</a>
             <button class="copy" id="copyMail" type="button" @click="copyMail">{{ copyLabel }}</button>

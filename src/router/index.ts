@@ -17,6 +17,26 @@ const router = createRouter({
       }
     },
     {
+      path: '/experience',
+      name: 'Experience',
+      component: () => import('../views/ExperienceView.vue'),
+      meta: {
+        title: `Experience & CV | ${SITE}`,
+        description:
+          'Experience, education and skills of Amalia Cicala, artist manager and music marketer at BANDS Management, based in Milan: roles, volunteering, degree, courses and toolkit.'
+      }
+    },
+    {
+      path: '/services',
+      name: 'Services',
+      component: () => import('../views/ServicesView.vue'),
+      meta: {
+        title: `Services for Bands: Meta Ads, Consulting & EPKs | ${SITE}`,
+        description:
+          'Consulting, coaching and audits for bands and artists, Meta and YouTube ad campaigns, press releases in Italian and English, EPKs and websites. Amalia Cicala, Milan, working worldwide.'
+      }
+    },
+    {
       path: '/photos',
       name: 'Photos',
       component: () => import('../views/photos/PhotosView.vue'),

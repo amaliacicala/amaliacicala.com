@@ -14,6 +14,14 @@ const SELECTOR = [
   '.vol-list li',
   '.freelance-head',
   '.fl-list li',
+  '.offer-list li',
+  '.steps li',
+  '.svc-preview a',
+  '.snapshot li',
+  '.photos-hero',
+  '.stats li',
+  '.how',
+  '.press-names li',
   '.edu .sub',
   '.edu-cards > *',
   '.cert-list li',
@@ -24,7 +32,7 @@ const SELECTOR = [
 ].join(',');
 
 // Rules that draw themselves across when they come into view
-const LINES = ['.hero-body', '.services', '.roster', '.cases', '.timeline', '.vol-list', '.fl-list', '.edu-grid', '.albums', '.masonry', '.albums-empty'].join(',');
+const LINES = ['.hero-body', '.services', '.roster', '.cases', '.timeline', '.vol-list', '.fl-list', '.offer-list', '.steps', '.stats', '.press-names', '.snapshot', '.edu-grid', '.albums', '.masonry', '.albums-empty'].join(',');
 
 // Big headings whose words slide up from behind a mask
 const HEADINGS = ['.hero h1', '.sec-head h2', '.page-h', '.contact h2'].join(',');
@@ -71,7 +79,14 @@ export function useReveal() {
 
   const scan = () => {
     if (!io) return;
-    document.querySelectorAll<HTMLElement>(HEADINGS).forEach(splitWords);
+    document.querySelectorAll<HTMLElement>(HEADINGS).forEach((el) => {
+      splitWords(el);
+      // Observe each heading itself, so its words reveal even outside an animated block
+      if (!el.dataset.watched) {
+        el.dataset.watched = '1';
+        io!.observe(el);
+      }
+    });
     document.querySelectorAll<HTMLElement>(LINES).forEach((el) => {
       if (el.classList.contains('ln')) return;
       el.classList.add('ln');

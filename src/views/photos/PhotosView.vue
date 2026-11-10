@@ -11,14 +11,18 @@ import { albums, albumLine } from '@/content/photos';
         <div>
           <h1 id="photos-h" class="page-h">Concert photography</h1>
           <p class="intro">
-            I’m a concert and music photographer based in Milan, Italy, shooting live shows, festivals and press
-            photos for bands. My band photo of Benthos ran in Metal Hammer UK. Available in Milan and worldwide.
+            I'm a concert and music photographer based in Milan, Italy, shooting live shows, festivals and press
+            photos for bands. Available in Milan and worldwide.
           </p>
           <div class="btns photos-cta">
             <RouterLink class="btn solid" :to="{ path: '/', hash: '#contact' }">Book a shoot</RouterLink>
           </div>
         </div>
       </div>
+      <figure class="photos-hero">
+        <img src="/img/me/photographing-tesseract.jpg" alt="Amalia photographing TesseracT from the barrier as the singer reaches out to the crowd" width="1440" height="712" />
+        <figcaption>Shooting TesseracT from the barrier</figcaption>
+      </figure>
     </div>
   </header>
 
@@ -39,7 +43,7 @@ import { albums, albumLine } from '@/content/photos';
 
       <div v-else class="albums-empty">
         <h2>New galleries are on the way</h2>
-        <p>I’m putting together a fresh selection of recent shows. In the meantime, get in touch for bookings or to see more work.</p>
+        <p>I'm putting together a fresh selection of recent shows. In the meantime, get in touch for bookings or to see more work.</p>
         <RouterLink class="btn" :to="{ path: '/', hash: '#contact' }">Get in touch</RouterLink>
       </div>
     </div>

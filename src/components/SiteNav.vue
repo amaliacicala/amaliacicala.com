@@ -5,8 +5,10 @@ import { RouterLink, useRoute } from 'vue-router';
 const links = [
   { label: 'Artists', to: { path: '/', hash: '#roster' } },
   { label: 'Work', to: { path: '/', hash: '#work' } },
-  { label: 'Experience', to: { path: '/', hash: '#cv' } },
-  { label: 'Photography', to: '/photos', match: '/photos' },
+  { label: 'Experience', to: '/experience', match: '/experience' },
+  { label: 'Services', to: '/services', match: '/services' },
+  // Photography is hidden from the menu until the galleries are updated
+  // { label: 'Photography', to: '/photos', match: '/photos' },
   { label: 'Contact', to: { path: '/', hash: '#contact' } }
 ];
 
