@@ -87,7 +87,7 @@ async function copyMail() {
         <div class="rail"><p class="label">Artists</p><figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure></div>
         <div>
           <h2 id="roster-h">Who I work with</h2>
-          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous’s Patreon.</p>
+          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous’ Patreon.</p>
           <div class="photo-row">
             <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
             <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
@@ -129,7 +129,7 @@ async function copyMail() {
         <p class="label">Selected work</p>
         <div>
           <h2 id="work-h">Projects</h2>
-          <p class="intro">Two projects that show the range of the job, from running a band end to end to releasing an album without a label.</p>
+          <p class="intro">Two projects that show the range of the job, from running a band end to end to releasing an album without a label, plus recent freelance campaigns.</p>
         </div>
       </div>
 
@@ -200,6 +200,18 @@ async function copyMail() {
             <blockquote class="quote"><p>“…attention-grabbing contrasts that persuade you that <i>Angel</i> might be the quartet’s best work.”</p><cite>Kerrang!</cite></blockquote>
           </div>
         </article>
+      </div>
+
+      <div class="freelance" aria-labelledby="freelance-h">
+        <div class="freelance-head">
+          <h3 class="sub-sm" id="freelance-h">Freelance campaigns</h3>
+          <p>Digital marketing campaigns for independent bands from the Milan scene.</p>
+        </div>
+        <ul class="fl-list">
+          <li><span class="fl-name">Margin Code</span><span class="fl-genre">Progressive metal · Milan</span></li>
+          <li><span class="fl-name">Omens Before Hysteria</span><span class="fl-genre">Deathcore · Milan</span></li>
+          <li><span class="fl-name">Furor Gallico</span><span class="fl-genre">Folk metal · Milan</span></li>
+        </ul>
       </div>
     </div>
   </section>
