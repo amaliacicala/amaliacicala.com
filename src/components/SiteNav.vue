@@ -5,8 +5,8 @@ import { RouterLink, useRoute } from 'vue-router';
 const links = [
   { label: 'Artists', to: { path: '/', hash: '#roster' } },
   { label: 'Work', to: { path: '/', hash: '#work' } },
-  { label: 'Services', to: '/services', match: '/services' },
   { label: 'Experience', to: '/experience', match: '/experience' },
+  { label: 'Services', to: '/services', match: '/services' },
   { label: 'Photography', to: '/photos', match: '/photos' },
   { label: 'Contact', to: { path: '/', hash: '#contact' } }
 ];
