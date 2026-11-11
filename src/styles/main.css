@@ -38,7 +38,9 @@ p{margin:0}
 .label{font-family:var(--display);font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-ink)}
 
 /* nav */
-nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;border-bottom:1px solid var(--line)}
+/* The frosted background lives on a pseudo-element: a blur on the nav itself would trap the full-screen mobile menu inside the bar */
+nav.top::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--paper) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
 .mark{font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none}
 .mark span{color:var(--coral)}
@@ -60,7 +62,6 @@ nav.top ul a:hover{color:var(--ink)}
   nav.top ul a.current,nav.top ul a:hover{color:var(--coral-ink)}
   nav.top .mark{position:relative;z-index:2}
   html.menu-open{overflow:hidden}
-  nav.top.open{backdrop-filter:none;-webkit-backdrop-filter:none}
   nav.top ul a,nav.top ul a:hover,nav.top ul a.current{background:none!important;padding-bottom:0}
 }
 
