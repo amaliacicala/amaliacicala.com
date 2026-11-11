@@ -121,7 +121,7 @@ import { RouterLink } from 'vue-router';
       <h2 id="exp-contact-h" class="contact-h">Want to work together? <em>Get in touch.</em></h2>
       <p class="contact-svc">See what I offer bands and artists. <RouterLink to="/services">See all services →</RouterLink></p>
       <div class="mail">
-        <a class="addr" href="mailto:amalia@bands.management">amalia@bands.management</a>
+        <a class="addr" href="mailto:info@amaliacicala.com">info@amaliacicala.com</a>
       </div>
     </div>
   </section>

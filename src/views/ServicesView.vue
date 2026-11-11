@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const EMAIL = 'amalia@bands.management';
+const EMAIL = 'info@amaliacicala.com';
 const addr = ref<HTMLAnchorElement | null>(null);
 const copyLabel = ref('Copy');
 async function copyMail() {
