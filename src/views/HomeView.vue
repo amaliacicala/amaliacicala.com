@@ -140,7 +140,7 @@ async function copyMail() {
         <p class="label">Work</p>
         <div>
           <h2 id="work-h">Selected projects</h2>
-          <p class="intro">Two examples from my work, chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, some of my recent freelance campaigns.</p>
+          <p class="intro">Two examples from my work, chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, a few of my most recent freelance clients.</p>
         </div>
       </div>
 
@@ -158,7 +158,7 @@ async function copyMail() {
           </div>
           <div>
             <h3 class="case-title" @click="toggleCase(0)"><i>From Nothing</i>, and a first year on European stages</h3>
-            <p class="summary">I run every side of the band: management, marketing, booking and the road. Since their InsideOut Music debut that has meant festival bills, major support tours and a first UK headline run.</p>
+            <p class="summary">I'm the sole manager of Italian prog metal band <strong>Benthos</strong>, covering every side of the job: management, marketing, booking and the road. Since their InsideOut Music debut that has meant festival bills, major support tours and a first UK headline run.</p>
             <button type="button" class="case-toggle" :aria-expanded="openCases[0]" aria-controls="case-0" @click="toggleCase(0)"><span>{{ openCases[0] ? 'Show less' : 'See what I did' }}</span><span class="case-toggle-icon" aria-hidden="true"></span></button>
             <div id="case-0" class="case-more" :class="{ open: openCases[0] }" :inert="!openCases[0]"><div class="case-more-inner">
             <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
@@ -198,7 +198,7 @@ async function copyMail() {
           </div>
           <div>
             <h3 class="case-title" @click="toggleCase(1)">Releasing <i>Angel</i> without a label</h3>
-            <p class="summary">Our biggest project together was <i>Angel</i>, an independent album, where the management team took on everything a label would normally do, then turned release week into a run of Halloween events.</p>
+            <p class="summary">With German progressive metalcore band <strong>Unprocessed</strong>, our biggest project together was <i>Angel</i>, an independent album, where the management team took on everything a label would normally do, then turned release week into a run of Halloween events.</p>
             <button type="button" class="case-toggle" :aria-expanded="openCases[1]" aria-controls="case-1" @click="toggleCase(1)"><span>{{ openCases[1] ? 'Show less' : 'See what I did' }}</span><span class="case-toggle-icon" aria-hidden="true"></span></button>
             <div id="case-1" class="case-more" :class="{ open: openCases[1] }" :inert="!openCases[1]"><div class="case-more-inner">
             <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
@@ -227,8 +227,8 @@ async function copyMail() {
 
       <div class="freelance" aria-labelledby="freelance-h">
         <div class="freelance-head">
-          <h3 class="sub-sm" id="freelance-h">Freelance campaigns</h3>
-          <p>Digital marketing campaigns for independent bands from the Milan scene.</p>
+          <h3 class="sub-sm" id="freelance-h">Recent freelance clients</h3>
+          <p>The latest of many: digital marketing campaigns for independent bands from the Milan scene.</p>
         </div>
         <ul class="fl-list">
           <li><span class="fl-name">Margin Code</span><span class="fl-genre">Progressive metal · Milan</span></li>

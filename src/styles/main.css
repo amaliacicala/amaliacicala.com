@@ -159,6 +159,7 @@ section.block{border-top:1px solid var(--line);padding-block:clamp(56px,8vw,104p
 .case-more-inner{overflow:hidden;min-height:0}
 .case-more.open .case-more-inner{padding-top:4px}
 .case-title{cursor:pointer}
+.case .summary strong{font-weight:600;color:var(--ink)}
 .case .summary{margin-bottom:14px}
 .case-toggle{display:inline-flex;align-items:center;gap:10px;margin:0 0 6px;padding:9px 16px 9px 18px;border:1px solid var(--coral);border-radius:999px;background:transparent;color:var(--coral-ink);font:600 .8rem/1 var(--display);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
 .case-toggle:hover,.case-toggle[aria-expanded="true"]{background:var(--coral);color:#fff}
