@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 
 const addr = ref<HTMLAnchorElement | null>(null);
 const copyLabel = ref('Copy');
-const EMAIL = 'amalia@bands.management';
+const EMAIL = 'info@amaliacicala.com';
 
 const services = [
   { hash: '#consulting', title: 'Consulting & coaching', short: '1:1 sessions, Q&A, audits', icon: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h3"/>' },
@@ -294,7 +294,7 @@ async function copyMail() {
           <p class="based">Based in Milan, Italy · Available worldwide</p>
           <p class="contact-svc">I offer 1:1 consultations, Meta and YouTube ad campaigns, press releases, EPKs and websites. <RouterLink to="/services">See all services →</RouterLink></p>
           <div class="mail">
-            <a ref="addr" class="addr" href="mailto:amalia@bands.management">amalia@bands.management</a>
+            <a ref="addr" class="addr" href="mailto:info@amaliacicala.com">info@amaliacicala.com</a>
             <button class="copy" id="copyMail" type="button" @click="copyMail">{{ copyLabel }}</button>
           </div>
         </div>
