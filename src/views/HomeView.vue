@@ -131,6 +131,36 @@ async function copyMail() {
           </span>
         </li>
       </ul>
+      <div class="roster-photos-m">
+          <div class="photo-row">
+            <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
+            <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
+            <figure><img src="/img/me/unprocessed-festival.jpg" alt="Amalia with Unprocessed and the team at a festival" loading="lazy" width="900" height="600"><figcaption>Unprocessed</figcaption></figure>
+          </div>
+        <figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cv" aria-labelledby="cv-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Experience</p>
+        <div>
+          <h2 id="cv-h">Over ten years around bands</h2>
+          <p class="intro">From volunteering at shows and festivals to a music business degree and full-time artist management.</p>
+        </div>
+      </div>
+      <ol class="snapshot">
+        <li><span class="when-sm">2015</span><h3>First gigs</h3><p>Volunteering on merch and street teams</p></li>
+        <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
+        <li><span class="when-sm">2022</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
+        <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
+        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
+      </ol>
+      <div class="btns services-cta">
+        <RouterLink class="btn solid" to="/experience">See full experience</RouterLink>
+      </div>
     </div>
   </section>
 
@@ -139,8 +169,8 @@ async function copyMail() {
       <div class="sec-head">
         <p class="label">Work</p>
         <div>
-          <h2 id="work-h">Selected projects</h2>
-          <p class="intro">Two examples from my work, chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, a few of my most recent freelance clients.</p>
+          <h2 id="work-h">Examples of my work</h2>
+          <p class="intro">Two projects chosen to show the range of the job: running a band end to end, and releasing an album without a label. Below them, a few of my most recent freelance clients.</p>
         </div>
       </div>
 
@@ -258,34 +288,7 @@ async function copyMail() {
       <div class="btns services-cta">
         <RouterLink class="btn solid" to="/services">See all services</RouterLink>
       </div>
-    </div>
-  </section>
-
-  <section class="block" id="cv" aria-labelledby="cv-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Experience</p>
-        <div>
-          <h2 id="cv-h">Over ten years around bands</h2>
-          <p class="intro">From volunteering at shows and festivals to a music business degree and full-time artist management.</p>
-        </div>
-      </div>
-      <ol class="snapshot">
-        <li><span class="when-sm">2015</span><h3>First gigs</h3><p>Volunteering on merch and street teams</p></li>
-        <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
-        <li><span class="when-sm">2022</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
-        <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
-        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
-      </ol>
-      <div class="btns services-cta">
-        <RouterLink class="btn solid" to="/experience">See full experience</RouterLink>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="photo" aria-labelledby="photo-h">
-    <div class="wrap">
-      <div class="photo-band">
+      <div class="photo-band svc-band">
         <div>
           <h3 id="photo-h">Also behind the camera</h3>
           <p>Concert and music photographer based in Milan, shooting shows, festivals and press photos in Italy and on tour across Europe.</p>
