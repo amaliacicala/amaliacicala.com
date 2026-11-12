@@ -61,7 +61,7 @@ async function copyMail() {
       <h1><span class="ln1">Amalia</span> <span class="ln2">Cicala</span></h1>
       <div class="hero-body">
         <div class="hero-text">
-          <p class="hero-lede">I manage and market progressive and heavy bands, from the release plan and the ad budget to the merch table and the border crossing.</p>
+          <p class="hero-lede">I manage and market progressive and heavy bands, from long-term strategy and release plans to label relations and touring.</p>
           <div class="roles" aria-label="Disciplines"><span>Artist Management</span><span>Music Marketing</span><span>Touring</span><span>Photography</span></div>
           <p class="now">Based in <b>Milan</b>, working worldwide. Currently <b>Artist Manager at BANDS Management</b>, with artists from Italy, the USA, Norway, Australia, the Netherlands and Germany.</p>
           <div class="btns">
