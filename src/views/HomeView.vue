@@ -25,6 +25,7 @@ const team = { role: 'Co-manager', roleClass: 'co' };
 
 const artists = [
   { name: 'Benthos', genre: 'Progressive metal, mathcore', country: 'ITA', ...manager, links: [web('https://benthos-band.com/'), spotify('0A7v88d7h8uYeGaBhflb45')] },
+  { name: 'Haken', genre: 'Progressive metal', country: 'UK', ...team, links: [web('https://hakenmusic.com/'), spotify('2SRIVGDkdqQnrQdaXxDkJt')] },
   { name: 'Earthside', genre: 'Progressive metal, post-rock, cinematic rock', country: 'USA', ...team, links: [web('https://www.earthsideband.com/'), spotify('6mRDRKsNautYuxybddnvgg')] },
   { name: 'Einar Solberg', genre: 'Progressive rock, orchestral, solo artist', country: 'NOR', ...team, links: [web('https://einarsolberg.com/'), spotify('20xK8nEhn71rTjjBNoR5nv')] },
   { name: 'Caligula\'s Horse', genre: 'Progressive metal', country: 'AUS', ...team, links: [web('https://www.caligulashorse.com/'), spotify('6Zd7AjXsoLaweP9FHyudVC')] },
@@ -63,7 +64,7 @@ async function copyMail() {
         <div class="hero-text">
           <p class="hero-lede">I manage and market progressive and heavy bands, from long-term strategy and release plans to label relations and touring.</p>
           <div class="roles" aria-label="Disciplines"><span>Artist Management</span><span>Music Marketing</span><span>Touring</span><span>Photography</span></div>
-          <p class="now">Based in <b>Milan</b>, working worldwide. Currently <b>Artist Manager at BANDS Management</b>, with artists from Italy, the USA, Norway, Australia, the Netherlands and Germany.</p>
+          <p class="now">Based in <b>Milan</b>, working worldwide. Currently <b>Artist Manager at Byrne &amp; Sprich Management</b>, with artists from Italy, the UK, the USA, Norway, Australia, the Netherlands and Germany.</p>
           <div class="btns">
             <a class="btn solid" href="#roster">See who I work with</a>
             <a class="btn" href="#contact">Get in touch</a>
@@ -98,7 +99,7 @@ async function copyMail() {
         <div class="rail"><p class="label">Artists</p><figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure></div>
         <div>
           <h2 id="roster-h">Who I work with</h2>
-          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>BANDS Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
+          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>Byrne &amp; Sprich Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
           <div class="photo-row">
             <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
             <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
@@ -106,7 +107,7 @@ async function copyMail() {
           </div>
         </div>
       </div>
-      <div class="legend" aria-hidden="true"><span class="pill lead">Manager</span><span>sole management</span><span class="pill co">Co-manager</span><span>BANDS team</span><span class="pill sage">Patreon</span><span>supporter community, BANDS team</span></div>
+      <div class="legend" aria-hidden="true"><span class="pill lead">Manager</span><span>sole management</span><span class="pill co">Co-manager</span><span>B&amp;S team</span><span class="pill sage">Patreon</span><span>supporter community, B&amp;S team</span></div>
       <ul class="roster">
         <li v-for="artist in artists" :key="artist.name">
           <span class="name">{{ artist.name }}</span>
@@ -156,7 +157,7 @@ async function copyMail() {
         <li><span class="when-sm">2018 – 2021</span><h3>BA (Hons) Commercial Music</h3><p>University of the West of Scotland · First Class Honours</p></li>
         <li><span class="when-sm">2022</span><h3>Artist Manager</h3><p>Independent · Milan, managing Benthos</p></li>
         <li><span class="when-sm">2024</span><h3>Event Production Programme</h3><p>Legend Club, Milan · 1 of 15 selected</p></li>
-        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>BANDS Management</p></li>
+        <li><span class="when-sm">2025 – now</span><h3>Artist Manager</h3><p>Byrne &amp; Sprich Management</p></li>
       </ol>
       <div class="btns services-cta">
         <RouterLink class="btn solid" to="/experience">See full experience</RouterLink>

@@ -141,7 +141,7 @@ const groups: Group[] = [
   }
 ];
 
-const artists = ['Benthos', 'Earthside', 'Einar Solberg', 'Caligula\'s Horse', 'Textures', 'Voyager', 'Unprocessed', 'Leprous', 'Margin Code', 'Omens Before Hysteria', 'Furor Gallico'];
+const artists = ['Benthos', 'Haken', 'Earthside', 'Einar Solberg', 'Caligula\'s Horse', 'Textures', 'Voyager', 'Unprocessed', 'Leprous', 'Margin Code', 'Omens Before Hysteria', 'Furor Gallico'];
 </script>
 
 <template>

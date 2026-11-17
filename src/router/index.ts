@@ -13,7 +13,7 @@ const router = createRouter({
       meta: {
         title: `${SITE} | Artist Manager & Metal Music Marketer, Milan`,
         description:
-          'Amalia Cicala, artist manager and music marketer at BANDS Management, based in Milan and working worldwide. Management, marketing, booking and touring for progressive and heavy bands.'
+          'Amalia Cicala, artist manager and music marketer at Byrne & Sprich Management, based in Milan and working worldwide. Management, marketing, booking and touring for progressive and heavy bands.'
       }
     },
     {
@@ -23,7 +23,7 @@ const router = createRouter({
       meta: {
         title: `Experience & CV | ${SITE}`,
         description:
-          'Experience, education and skills of Amalia Cicala, artist manager and music marketer at BANDS Management, based in Milan: roles, volunteering, degree, courses and toolkit.'
+          'Experience, education and skills of Amalia Cicala, artist manager and music marketer at Byrne & Sprich Management, based in Milan: roles, volunteering, degree, courses and toolkit.'
       }
     },
     {
