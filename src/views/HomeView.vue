@@ -21,7 +21,7 @@ const linkLabels: Record<LinkKind, string> = { web: 'their website', listen: 'Sp
 const spotify = (id: string) => ({ kind: 'listen' as const, href: `https://open.spotify.com/artist/${id}` });
 const web = (href: string) => ({ kind: 'web' as const, href });
 const manager = { role: 'Manager', roleClass: 'lead' };
-const team = { role: 'Co-manager', roleClass: 'co' };
+const team = { role: 'Team', roleClass: 'co' };
 
 const artists = [
   { name: 'Benthos', genre: 'Progressive metal, mathcore', country: 'ITA', ...manager, links: [web('https://benthos-band.com/'), spotify('0A7v88d7h8uYeGaBhflb45')] },
@@ -99,7 +99,7 @@ async function copyMail() {
         <div class="rail"><p class="label">Artists</p><figure class="rail-photo"><img src="/img/me/benthos-unprocessed-wall.jpg" alt="Amalia in front of Benthos and Unprocessed posters on a festival wall" loading="lazy" width="640" height="1138"><figcaption>Benthos and Unprocessed, side by side</figcaption></figure></div>
         <div>
           <h2 id="roster-h">Who I work with</h2>
-          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. The other artists I co-manage as part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>Byrne &amp; Sprich Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
+          <p class="intro">Benthos I manage on my own, covering management, marketing, booking and tour management. For the other artists I'm part of the <a class="agency" href="https://bands.management" target="_blank" rel="noopener"><b>Byrne &amp; Sprich Management</b></a> team, working with them day to day on releases, campaigns, touring and merch. With the team I also run Leprous' Patreon.</p>
           <div class="photo-row">
             <figure><img src="/img/me/voyager-euroblast.jpg" alt="Amalia backstage with Voyager at Euroblast" loading="lazy" width="900" height="600"><figcaption>Voyager, Euroblast</figcaption></figure>
             <figure><img src="/img/me/earthside-2.jpg" alt="Amalia backstage with Earthside" loading="lazy" width="900" height="600"><figcaption>Earthside</figcaption></figure>
@@ -107,7 +107,7 @@ async function copyMail() {
           </div>
         </div>
       </div>
-      <div class="legend" aria-hidden="true"><span class="pill lead">Manager</span><span>sole management</span><span class="pill co">Co-manager</span><span>B&amp;S team</span><span class="pill sage">Patreon</span><span>supporter community, B&amp;S team</span></div>
+      <div class="legend" aria-hidden="true"><span class="pill lead">Manager</span><span>sole management</span><span class="pill co">Team</span><span>management team, B&amp;S</span><span class="pill sage">Patreon</span><span>supporter community, B&amp;S team</span></div>
       <ul class="roster">
         <li v-for="artist in artists" :key="artist.name">
           <span class="name">{{ artist.name }}</span>
@@ -221,7 +221,7 @@ async function copyMail() {
           <div class="case-side">
             <span class="who">Unprocessed</span>
             <span class="yr">2025</span>
-            <span class="role-line">Co-manager</span>
+            <span class="role-line">Management team</span>
             <div class="tags"><span class="pill">Independent release</span><span class="pill">Physical &amp; retail</span><span class="pill">Fan events</span><span class="pill">Partnerships</span></div>
             <div class="case-more case-more-photos" :class="{ open: openCases[1] }"><div class="case-more-inner"><div class="case-photos">
               <figure class="rail-photo"><img src="/img/me/unprocessed-release.jpg" alt="Amalia with Unprocessed and the team at the Angel release party in London" loading="lazy" width="900" height="600"><figcaption><i>Angel</i> release party, London</figcaption></figure>
